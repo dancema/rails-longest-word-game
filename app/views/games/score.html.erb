@@ -1,0 +1,12 @@
+<h1>Result</h1>
+
+<% if @result == "not in the grid" %>
+  <h2>Sorry but <strong><%= @word %></strong> can't be built out of <%= @grid.gsub(" ",', ') %></h2>
+<% elsif @result == false %>
+  <h2>Sorry but <strong><%= @word %></strong> does not seem to be a valid English word ...</h2>
+<% else %>
+  <h2>Congratulations! <strong><%= @word %></strong> is a valid English word!</h2>
+<% end  %>
+
+
+<%= link_to "Play again", new_path %>
